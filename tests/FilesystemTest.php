@@ -2,11 +2,11 @@
 
 use Valet\Filesystem;
 
-class FilesystemTest extends PHPUnit_Framework_TestCase
+class FilesystemTest extends ValetTestCase
 {
     public function tearDown()
     {
-        exec('rm -rf '.__DIR__.'/output');
+        parent::rm_rf(__DIR__.'/output');
         mkdir(__DIR__.'/output');
         touch(__DIR__.'/output/.gitkeep');
     }

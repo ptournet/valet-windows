@@ -39,7 +39,8 @@
         "files": [
             "cli/includes/compatibility.php",
             "cli/includes/facades.php",
-            "cli/includes/helpers.php"
+            "cli/includes/helpers.php",
+            "tests/ValetTestCase.php"
         ]
     },
     "bin": [

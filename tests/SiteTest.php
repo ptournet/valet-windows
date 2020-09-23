@@ -8,7 +8,7 @@ use Valet\Site;
 use function Valet\swap;
 use function Valet\user;
 
-class SiteTest extends PHPUnit_Framework_TestCase
+class SiteTest extends ValetTestCase
 {
     public function setUp()
     {
@@ -19,7 +19,7 @@ class SiteTest extends PHPUnit_Framework_TestCase
 
     public function tearDown()
     {
-        exec('rm -rf '.__DIR__.'/output');
+        parent::rm_rf(__DIR__.'/output');
         mkdir(__DIR__.'/output');
         touch(__DIR__.'/output/.gitkeep');
 

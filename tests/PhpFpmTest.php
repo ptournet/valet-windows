@@ -7,7 +7,7 @@ use function Valet\resolve;
 use function Valet\swap;
 use function Valet\user;
 
-class PhpFpmTest extends PHPUnit_Framework_TestCase
+class PhpFpmTest extends ValetTestCase
 {
     public function setUp()
     {
@@ -18,7 +18,7 @@ class PhpFpmTest extends PHPUnit_Framework_TestCase
 
     public function tearDown()
     {
-        exec('rm -rf '.__DIR__.'/output');
+        parent::rm_rf(__DIR__.'/output');
         mkdir(__DIR__.'/output');
         touch(__DIR__.'/output/.gitkeep');
 
